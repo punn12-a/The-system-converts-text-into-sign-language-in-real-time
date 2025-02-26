@@ -4,27 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แปลงข้อความเป็นภาษามือ</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
 </head>
-<body class="bg-gradient-to-r from-purple-400 to-blue-500 min-h-screen flex items-center justify-center">
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
 
-    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md text-center">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">แปลงข้อความเป็นภาษามือ</h1>
-        <input 
-            type="text" 
-            id="textInput" 
-            class="border-2 border-gray-300 p-3 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" 
-            placeholder="พิมพ์ข้อความที่นี่..."
-        >
-        <button 
-            onclick="translateText()" 
-            class="mt-4 px-6 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-700 transition"
-        >
-            แปลงข้อความ
-        </button>
-        <div id="output" class="mt-4 p-4 text-gray-700 text-lg font-semibold"></div>
-    </div>
+    <h1 class="text-2xl font-bold mb-4">แปลงข้อความเป็นภาษามือ</h1>
+    <input type="text" id="textInput" placeholder="พิมพ์ข้อความที่นี่..." class="p-2 rounded w-64 text-black">
+    <button onclick="translateText()" class="mt-4 bg-blue-500 px-4 py-2 rounded">แปลงข้อความ</button>
 
+    <div id="output" class="mt-4"></div>
+    
     <script src="script.js"></script>
 </body>
 </html>
